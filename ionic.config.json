@@ -1,5 +1,8 @@
 {
   "name": "IMC Calculator",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "1413ec35"
 }

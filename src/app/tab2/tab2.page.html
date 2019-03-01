@@ -6,4 +6,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+	<ion-list>
+		<section *ngFor="let user of users" style="color: white">
+	    	<div style="width: 90%; background-image: linear-gradient(to bottom right, #3880ff, black); margin-left: 5%; border-radius: 10px;">
+		    	<div style="margin: 10px; padding: 10px 0px; text-align: center">
+			    	<h3>00{{user.id}} - {{user.name}}</h3>
+			    	<h4>{{user.status}}</h4>
+				    <p>Height: <b>{{user.height}}</b></p>
+				    <p>Weight: <b>{{user.weight}}</b></p>
+				    <p>IMC: <b>{{user.imc}}</b></p>
+		    	</div>
+	    	</div>
+  		</section>
+  		<section *ngIf="!users || !users.length">
+  			<h2 style="text-align: center; margin-top: 50%;">Não há registros</h2>
+  		</section>
+	</ion-list>
+</ion-content>
