@@ -9,13 +9,15 @@ import { RestApiService } from '../rest-api.service';
 
 export class Tab1Page {
   user = {}
+  postUser: any;
   success: any;
 
   constructor(public api: RestApiService) {	
 
 	this.postUser = async function() {
 	    await this.api.postUser(this.user).subscribe(res => {
-		   	this.success = res;
+         this.success = res;
+         alert('Calculation completed successfully!\nSee the result in "All" page')
 		}, err => {
 			console.log(err);
 		}); 
